@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/admin/admin_style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h2>Administration</h2>
+    </header>
+    <div class="grid">
+      <div class="navbar">
+        <div>
+          <span>Spelare</span>
+          <a href="/admin/players"><p>Lista spelare</p></a>
+          <a href="/admin/players/new"><p>Lägg till spelare</p></a>
+          <span> Spel</span>
+          <a href="/admin/games"><p class="current-page">Lista spel</p></a>
+          <a href="/admin/games/new"><p>Lägg till spel</p></a>
+          <span>Highscores</span>
+          <a href="/admin/scores"><p>Lista highscores</p></a>
+          <a href="/admin/scores/new"><p>Lägg till highscores</p></a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="content">
+          <div class="title-container">
+            <h4 class="admin-page-title">Spel</h4>
+            <a class="add" href="/admin/games/new">Lägg till</a>
+          </div>
+          <table class="players-table">
+            <tbody>
+              <tr class="title-row">
+                <th class="title">Id</th>
+                <th class="title">Title</th>
+                <th class="title">Genre</th>
+              </tr>
+              <% games.forEach(game => { %>
+                <tr class="table-row">
+                  <td><a href="/admin/games/<%= game.url_slug %>"><%= game.id %></a></td>
+                  <td><a href="/admin/games/<%= game.url_slug %>"><%= game.name %></a></td>
+                  <td><a href="/admin/games/<%= game.url_slug %>"><%= game.genre %></a></td>
+                </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

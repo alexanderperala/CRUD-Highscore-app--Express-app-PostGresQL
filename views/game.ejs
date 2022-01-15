@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= data[0].game_name %></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="/">
+        <img
+          class="logotype"
+          src="https://via.placeholder.com/400x150?text=Highscores"
+        />
+      </a>
+      <form autocomplete="off" class="searh-container" action="/search">
+        <input type="search" name="q" placeholder="Sök spel" />
+        <button>Sök</button>
+      </form>
+    </header>
+    <div class="game-details">
+      <div class="game-img">
+        <img src="<%- data[0].game_img %>" />
+      </div>
+      <div class="about-game">
+        <h3><%= data[0].game_name %></h3>
+        <p><%= data[0].game_about %></p>
+      </div>
+    </div>
+    <h2 class="title">Highscores</h2>
+    <div class="body-content">
+      <% if (data[0].player_id) { %>
+      <% data.map(obj => { %>
+      <div class="game-details-scores">
+        <div>
+          <p>
+            <span id="details-name"><%= obj.player_firstname %> <%= obj.player_lastname %></span>,
+            <span id="details-date"><%= obj.score_date %></span>
+          </p>
+        </div>
+        <p id="details-score"><%= obj.score_score %></p>
+      </div>
+      <% }) %>
+
+    <% } else { %>
+      <h3 id="no-highscores-message">Inga highscores registrerade ännu</h3>
+      <% } %>
+    </div>
+    <footer class="footer">
+      <span>Copyright© 2019 Highscore</span>
+    </footer>
+  </body>
+</html>

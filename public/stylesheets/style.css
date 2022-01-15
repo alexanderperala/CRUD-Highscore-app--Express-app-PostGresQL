@@ -1,0 +1,215 @@
+html,
+body {
+  height: 100%;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  height: 130px;
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.footer span {
+  font-style: italic;
+  font-size: 16px;
+}
+
+.footer a {
+  font-size: 12px;
+}
+
+/**** Header ****/
+.header {
+  background-color: rgb(236, 236, 236);
+  height: 260px;
+}
+
+.logotype {
+  padding-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.searh-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.searh-container input {
+  border-radius: 5px;
+  height: 40px;
+  width: 350px;
+  font-size: 25;
+  border: black solid 1px;
+  outline: none;
+}
+
+.searh-container input::placeholder {
+  padding: 20px;
+}
+
+.searh-container button {
+  margin-left: 10px;
+  width: 35px;
+}
+/* End */
+.body-content {
+  margin-bottom: 100px;
+}
+.title {
+  font-weight: 600;
+  font-size: 35px;
+  text-align: center;
+  margin-top: 4%;
+  margin-bottom: 3%;
+}
+
+/*** Card-grid ***/
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  height: 80px;
+  width: 65%;
+  max-width: 800px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: solid black 1px;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+/* End */
+
+/*** Search-page ***/
+.game-grid {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+.game-card {
+  border: solid 1px black;
+}
+
+.game-card img {
+  height: auto;
+  width: 100%;
+}
+
+.game-card div {
+  display: block;
+}
+
+.game-card-name {
+  padding-left: 10px;
+  font-weight: bold;
+  float: left;
+}
+.game-card-genre {
+  font-style: italic;
+}
+
+.search-hits {
+  display: block;
+  width: 65%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+/* End */
+
+/*** Details-page ***/
+.game-details {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 65%;
+  max-width: 900px;
+  background-color: rgb(248, 248, 248);
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.game-img {
+  grid-column: 1 / 2;
+  text-align: center;
+}
+
+.about-game {
+  grid-column: 2 / 3;
+}
+
+.about-game h3 {
+  font-size: 30px;
+  margin-bottom: 13px;
+}
+
+.game-details-scores {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 65%;
+  max-width: 800px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: solid black 1px;
+}
+
+#details-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+#details-date {
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+#details-score {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+#no-highscores-message {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  color: grey;
+  font-weight: 200;
+  text-align: center;
+}

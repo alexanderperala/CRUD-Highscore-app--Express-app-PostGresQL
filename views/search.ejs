@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="/">
+        <img
+          class="logotype"
+          src="https://via.placeholder.com/400x150?text=Highscores"
+        />
+      </a>
+      <form autocomplete="off" class="searh-container" action="/search">
+        <input type="search" name="q" placeholder="Sök spel" />
+        <button>Sök</button>
+      </form>
+    </header>
+    <h3 class="title">Sök spel</h3>
+    <span class="search-hits">Hittade <%= games.length %> träffar på "<%= searchTerm %>" </span>
+    <div class="game-grid">
+    <% games.forEach(game => { %>
+      <div class="game-card">
+        <a href="/game/<%= game.url_slug %>">
+        <img src="<%- game.image_url %>" />
+      </a>
+        <div>
+          <span class="game-card-name"><%= game.name %></span>
+          <span class="game-card-genre"><%= game.genre %></span>
+        </div>
+      </div>
+      <% }) %>
+    </div> 
+      <footer class="footer">
+        <span>Copyright© 2019 Highscore</span>
+      </footer>
+    </body>
+  </body>
+</html>

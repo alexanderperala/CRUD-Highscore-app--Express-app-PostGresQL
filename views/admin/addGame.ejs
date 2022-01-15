@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/admin/admin_style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h2>Administration</h2>
+    </header>
+    <div class="grid">
+      <div class="navbar">
+        <div>
+          <span>Spelare</span>
+          <a href="/admin/players"><p>Lista spelare</p></a>
+          <a href="/admin/players/new"><p>Lägg till spelare</p></a>
+          <span> Spel</span>
+          <a href="/admin/games"><p>Lista spel</p></a>
+          <a href="/admin/games/new"><p class="current-page">Lägg till spel</p></a>
+          <span>Highscores</span>
+          <a href="/admin/scores"><p>Lista highscores</p></a>
+          <a href="/admin/scores/new"><p>Lägg till highscores</p></a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="addplayer-content">
+          <div class="title-container">
+            <h4 class="admin-page-title">Lägg till spel</h4>
+          </div>
+          <div class="admin-form">
+            <form autocomplete="off" method="POST">
+              <label for="name">Titel</label>
+              <input name="name"id="title" type="text" placeholder="Ange titel" />
+
+              <label for="description">Beskrivning</label>
+              <textarea name="description" id="description" placeholder="Ange beskrivning"></textarea>
+              
+              <label for="genre">Genre</label>
+              <select name="genre" id="genre">
+                <option value="Action">Action</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Labyrinth">Labyrinth</option>
+                <option value="Puzzel">Puzzel</option>
+                <option value="Racing">Racing</option>
+                <option value="Strategy">Strategy</option>
+                <option value="Shoot 'em up">Shoot 'em up</option>
+                <option value="FPS">FPS</option>
+                <option value="Other">Other</option>
+              </select>
+
+              <label for="imageUrl">Bild</label>
+              <input name="imageUrl" type="text" id="imageUrl" placeholder="Ange URL">
+
+              <button class="add">Lägg till</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

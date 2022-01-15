@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="/">
+        <img
+          class="logotype"
+          src="https://via.placeholder.com/400x150?text=Highscores"
+        />
+      </a>
+      <form autocomplete="off" class="searh-container" action="/search">
+        <input type="search" name="q" placeholder="Sök spel" />
+        <button>Sök</button>
+      </form>
+    </header>
+    <h2 class="title">Senaste highscores</h2>
+    <div class="body-content">
+    <% scores.forEach(score => { %>
+    <div class="card">
+      <div class="card-details">
+        <h3 class="game"><%= score.game_name %></h3>
+        <h3 class="score"><%= score.score %></h3>
+      </div>
+      <span><%= score.first_name %> <%= score.last_name %>,</span>
+      <span><%= score.date %></span>
+    </div>
+    <% }) %>
+  </div>
+    <footer class="footer">
+      <span>Copyright© 2019 Highscore</span>
+      <a href="#">Administratior</a>
+    </footer>
+  </body>
+</html>

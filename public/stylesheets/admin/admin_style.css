@@ -1,0 +1,240 @@
+/* GLOBAL STYLES */
+html,
+body {
+  height: 100%;
+}
+
+* {
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.footer {
+  height: 130px;
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  margin-bottom: 130px;
+}
+
+.footer span {
+  font-style: italic;
+  font-size: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: rgb(37, 37, 37);
+  box-shadow: inset 0px -11px 15px 0px #000000;
+  height: 100px;
+  padding-left: 90px;
+  font-size: 20px;
+}
+
+.header h2 {
+  color: white;
+}
+
+/*** Navbar ***/
+.grid {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  min-height: 100%;
+  margin-bottom: -130px;
+}
+
+.navbar {
+  grid-column: 1/2;
+  padding-top: 40px;
+  padding-left: 20px;
+  background-color: rgb(219, 219, 219);
+}
+
+.navbar div {
+  display: flex;
+  flex-flow: column;
+}
+.navbar span {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.current-page {
+  color: rgb(85, 128, 247);
+  font-weight: 600;
+}
+/* End */
+
+.conainer {
+  grid-column: 2/3;
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  min-width: fit-content;
+}
+
+.title-container {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-page-title {
+  font-size: 35px;
+}
+
+.title-container a {
+  text-align: center;
+  border: solid 1px grey;
+  border-radius: 5px;
+  padding: 7px;
+  width: 90px;
+}
+.title-container a:hover {
+  cursor: pointer;
+  background-color: grey;
+  color: white;
+}
+
+/*** Players-Page ***/
+.players-table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  width: -webkit-fill-available;
+  border: black solid 2px;
+  border-collapse: collapse;
+}
+
+.title-row .title {
+  background-color: rgb(255, 255, 255);
+  border-left: black solid 2px;
+}
+.table-row {
+  border: black solid 1px;
+}
+
+.table-row td {
+  padding: 10px;
+  border-left: black solid 2px;
+}
+
+.table-row:nth-child(2n) {
+  background-color: rgb(231, 231, 231);
+}
+
+/*** Add Player-Page  ***/
+.admin-form {
+  width: 500px;
+}
+.admin-form input,
+select {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 40px;
+}
+
+#description {
+  resize: none;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 140px;
+}
+
+label {
+  font-weight: 700;
+}
+
+.admin-form input::placeholder,
+textarea::placeholder {
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.admin-form input:focus,
+textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgb(73, 184, 214);
+}
+
+.addplayer-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  min-width: fit-content;
+}
+
+.admin-form button {
+  float: right;
+  height: 35px;
+  width: 90px;
+}
+
+.btn-container-edit {
+  justify-content: flex-start;
+  display: flex;
+  width: 200px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 200px;
+}
+
+.btn-container .btn {
+  color: white;
+  height: 50%;
+  font-weight: 400;
+  border-radius: 5px;
+  padding: 5px; 
+}
+
+.delete {
+  background-color: #ff3d3d;
+  color: white !important;
+  height: 50%;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 5px;
+  border: none !important;
+}
+.delete:hover {
+  background-color: #d32424;
+}
+
+#score::-webkit-inner-spin-button, 
+#score::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.edit, .add  {
+  background-color: rgb(85, 128, 247) !important;;
+  color: white !important;;
+  height: 50%;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 5px;
+  border: none !important;
+}
+.edit:hover, .add:hover {
+  background-color: rgb(51, 103, 247) !important;
+}

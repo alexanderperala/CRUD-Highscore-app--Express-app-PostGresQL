@@ -1,0 +1,7 @@
+
+lägg till delete, put - knapp?? 
+
+
+
+BUG/ar - som måste fixas: 
+om ett spel inte har något registrerat score på sig, blir det error på detaljsidan
