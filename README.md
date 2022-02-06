@@ -1,5 +1,5 @@
 # CRUD-Highscore-app--Express-app-PostGresQL
-A CRUD "highscores-app" build with Express and PostGresQL thats runs on backend. 
+A CRUD "highscores-app" build with Express and PostGresQL. Runs on serverside. 
 
-A backend "Highscores App" build completely on backend with in Node.js using Express library.
+A backend "Highscores App" build  with in Node.js using Express library.
 Fully functional with and redo to connect to a PostGresQL database. 
